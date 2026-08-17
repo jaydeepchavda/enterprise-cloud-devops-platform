@@ -1,0 +1,111 @@
+.jobSummary {
+  background-color: #fff;
+  flex: 1;
+  padding: 30px;
+  padding-top: 0;
+  border: 1px solid #d9d8d8;
+  border-radius: 4px;
+  width: 100%;
+  z-index: 1;
+  .header{
+    position: sticky;
+    top:0;
+    background-color: #fff;
+    padding-top: 30px;
+  }
+
+  // scroll
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 700px;
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: transparent;
+  }
+  &:hover {
+    &::-webkit-scrollbar {
+      border-radius: 0;
+      width: 8px;
+    }
+    &::-webkit-scrollbar-thumb {
+      border-radius: 4px;
+      background-color: rgba(22, 24, 35, 0.06);
+    }
+    &::-webkit-scrollbar-track {
+      border-radius: 0;
+      background-color: rgba(0, 0, 0, 0);
+    }
+  }
+
+  .name {
+    font-size: 14px;
+    color: #bbbbbb;
+    margin-bottom: 30px;
+  }
+  .apply {
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    color: red;
+    border-bottom: 1px solid #bbbbbb;
+    padding-bottom: 30px;
+    svg {
+      margin: 0 30px;
+      cursor: pointer;
+    }
+    button {
+      flex: 1;
+      color: #fff;
+      background-color: var(--primary);
+      font-size: 18px;
+      font-weight: 600;
+      padding: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      &:hover {
+        background-color: rgb(211, 5, 5);
+      }
+      &.disable{
+        background-color: #b4b1b1;
+        cursor: default;
+      }
+      a{
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+    }
+  }
+  .overview {
+    font-size: 14px;
+    color: #5e5d5d;
+    margin: 20px 5px;
+    border-bottom: 1px solid #bbbbbb;
+    padding-bottom: 30px;
+    .overview-item {
+      margin: 7px 0;
+      svg {
+        height: 14px;
+        width: 14px;
+        margin-right: 7px;
+      }
+    }
+    .sallary {
+      color: rgb(109, 170, 18);
+    }
+    .time {
+      color: rgb(8, 204, 204);
+    }
+  }
+  p{
+    // margin:10px 0 30px;
+    white-space: pre-wrap;
+    line-height: 1.5;
+    &.bold{
+      font-weight: bold;
+    }
+  }
+
+  
+}
