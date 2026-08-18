@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import AboutCompany from "../../components/aboutCompany/aboutCompany";
+import AboutCompany from "../../components/aboutCompany/AboutCompany";
 import JobSummary from "../../components/jobSummary/JobSummary";
 import "./Job.scss";
 import { useLocation } from "react-router-dom";
