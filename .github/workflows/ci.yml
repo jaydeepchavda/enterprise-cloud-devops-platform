@@ -34,7 +34,7 @@ jobs:
             - name: 6. build and push frontend image
               run: |
                 docker build -t ${{ secrets.DOCKER_USERNAME }}/jobportal-web:latest ./frontend
-                docker push ${{ secrets.DOCKER_USERNAME }}/jobportal-api:latest
+                docker push ${{ secrets.DOCKER_USERNAME }}/jobportal-web:latest
 
 
     backend-ci:
@@ -56,5 +56,5 @@ jobs:
                 docker push ${{ secrets.DOCKER_USERNAME }}/jobportal-api:latest
 
 
-                
+
 
