@@ -56,5 +56,14 @@ jobs:
                 docker push ${{ secrets.DOCKER_USERNAME }}/jobportal-api:latest
 
 
+            - name: build and push image
+              run: |
+                docker build -t ${{ secrets.DOCKER_USERNAME}}/jobportal-web:{{ github.sha }} ./frontend
+                docker build -t ${{ secrets.DOCKER_USERNAME}}/jobportal-web:latest ./frontend
+                docker push ${{secrets.DOCKER_USERNAME}}/jobportal-web:{{ github.sha }}
+                docker push ${{secrets.DOCKER_USERNAME}}/jobportal-web:latest
+
+
+
 
 

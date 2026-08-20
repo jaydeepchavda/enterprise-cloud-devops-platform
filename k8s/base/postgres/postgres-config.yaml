@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: jobportal-postgres-config
+  namespace: jobportal-dev
+data:
+  POSTGRES_DB: jobportal_db
+  POSTGRES_USER: postgres
