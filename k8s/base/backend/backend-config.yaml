@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: backend-api-config
+  namespace: jobportal-dev
+
+data:
+  PORT: "5000"
+  DB_HOST: "jobportal-postgres-svc"
+  DB_PORT: "5432"
+  NODE_ENV: "production" 

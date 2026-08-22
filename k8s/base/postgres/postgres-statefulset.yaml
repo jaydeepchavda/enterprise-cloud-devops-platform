@@ -21,6 +21,12 @@ spec:
         ports:
         - containerPort: 5432
           name: postgres
+
+        envFrom:
+            - configMapRef:
+                name: jobportal-postgres-config
+            - secretRef:
+                name: jobportal-postgres-secret
         volumeMounts:
         - name: postgres-data
           mountPath: /var/lib/postgresql/data

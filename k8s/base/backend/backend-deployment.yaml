@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: jobportal-backend
+  namespace: jobportal-dev
+spec:
+  selector:
+    matchLabels:
+      app: jobportal-backend
+  template:
+    metadata:
+      labels:
+        app: jobportal-backend
+    spec:
+      containers:
+        - name: backend-api
+          image: jaydeepchavda/jobportal-api:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 5000
+              name: http
+          envFrom:
+            - configMapRef:
+                name: jobportal-backend-config
+            - secretRef:
+                name: jobportal-postgres-secret
